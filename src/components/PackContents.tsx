@@ -138,12 +138,6 @@ export default function PackContents() {
                 </p>
                 <div className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
-                    <div className="bg-accent/10 rounded-lg p-4 border border-accent/20">
-                      <h5 className="font-semibold text-primary mb-2">💎 Casos Reais</h5>
-                      <p className="text-sm text-muted-foreground">
-                        Histórias inspiradoras de mulheres que aplicaram o método e mudaram suas vidas.
-                      </p>
-                    </div>
                   </div>
                   
                   <div className="bg-gradient-hero/20 rounded-lg p-6 border-2 border-primary/30">
