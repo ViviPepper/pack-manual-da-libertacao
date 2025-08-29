@@ -139,12 +139,6 @@ export default function PackContents() {
                 <div className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="bg-accent/10 rounded-lg p-4 border border-accent/20">
-                      <h5 className="font-semibold text-primary mb-2">🧠 Neurociência do Trauma</h5>
-                      <p className="text-sm text-muted-foreground">
-                        Entenda como sua mente foi programada pelo abuso e como reprogramá-la para a liberdade.
-                      </p>
-                    </div>
-                    <div className="bg-accent/10 rounded-lg p-4 border border-accent/20">
                       <h5 className="font-semibold text-primary mb-2">⚡ Técnicas de Emergência</h5>
                       <p className="text-sm text-muted-foreground">
                         Ferramentas práticas para usar nos momentos de crise, ansiedade e manipulação.
