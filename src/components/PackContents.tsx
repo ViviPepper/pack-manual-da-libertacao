@@ -137,17 +137,6 @@ export default function PackContents() {
                   {coreModule.description}
                 </p>
                 <div className="space-y-6">
-                  <div className="bg-gradient-primary/10 rounded-lg p-6 border border-primary/20">
-                    <h4 className="text-xl font-bold text-primary mb-3 flex items-center gap-2">
-                      <span className="w-6 h-6 bg-gradient-primary rounded-full flex items-center justify-center text-primary-foreground text-sm">✓</span>
-                      O Método que Já Transformou Mais de 10 Mil Mulheres
-                    </h4>
-                    <p className="text-muted-foreground">
-                      Baseado em anos de pesquisa e milhares de relatos reais, este não é apenas mais um e-book. 
-                      É o resultado comprovado de mulheres que saíram do sofrimento para uma vida plena.
-                    </p>
-                  </div>
-                  
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="bg-accent/10 rounded-lg p-4 border border-accent/20">
                       <h5 className="font-semibold text-primary mb-2">🧠 Neurociência do Trauma</h5>
