@@ -139,12 +139,6 @@ export default function PackContents() {
                 <div className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="bg-accent/10 rounded-lg p-4 border border-accent/20">
-                      <h5 className="font-semibold text-primary mb-2">⚡ Técnicas de Emergência</h5>
-                      <p className="text-sm text-muted-foreground">
-                        Ferramentas práticas para usar nos momentos de crise, ansiedade e manipulação.
-                      </p>
-                    </div>
-                    <div className="bg-accent/10 rounded-lg p-4 border border-accent/20">
                       <h5 className="font-semibold text-primary mb-2">🎯 Plano de 90 Dias</h5>
                       <p className="text-sm text-muted-foreground">
                         Um roteiro claro e progressivo para sua transformação completa em 3 meses.
