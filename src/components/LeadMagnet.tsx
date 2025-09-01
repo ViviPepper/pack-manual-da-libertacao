@@ -97,81 +97,145 @@ export default function LeadMagnet() {
                 </div>
 
                 {!isSubmitted ? (
-                  <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-                    <div className="space-y-4">
-                      <div>
-                        <Label htmlFor="name">Nome completo</Label>
-                        <Input
-                          id="name"
-                          type="text"
-                          placeholder="Seu nome completo"
-                          {...register("name")}
-                          className="mt-1"
-                        />
-                        {errors.name && (
-                          <p className="text-sm text-destructive mt-1">{errors.name.message}</p>
-                        )}
+                  <div className="bg-gradient-primary/5 border border-primary/20 rounded-2xl p-6 shadow-glow">
+                    <div className="mb-6 text-center">
+                      <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-3">
+                        🔐 Acesso Exclusivo
                       </div>
-                      
-                      <div>
-                        <Label htmlFor="whatsapp">WhatsApp</Label>
-                        <Input
-                          id="whatsapp"
-                          type="tel"
-                          placeholder="(11) 99999-9999"
-                          {...register("whatsapp")}
-                          className="mt-1"
-                        />
-                        {errors.whatsapp && (
-                          <p className="text-sm text-destructive mt-1">{errors.whatsapp.message}</p>
-                        )}
-                      </div>
-                      
-                      <div>
-                        <Label htmlFor="email">Email</Label>
-                        <Input
-                          id="email"
-                          type="email"
-                          placeholder="seu@email.com"
-                          {...register("email")}
-                          className="mt-1"
-                        />
-                        {errors.email && (
-                          <p className="text-sm text-destructive mt-1">{errors.email.message}</p>
-                        )}
-                      </div>
-                    </div>
-
-                    <Button 
-                      type="submit"
-                      variant="hero" 
-                      size="xl" 
-                      className="w-full min-w-[280px]"
-                      disabled={isSubmitting}
-                    >
-                      {isSubmitting ? "Enviando..." : "Quero Receber o Guia Gratuito"}
-                    </Button>
-                  </form>
-                ) : (
-                  <div className="space-y-4">
-                    <div className="p-4 bg-primary/10 border border-primary/20 rounded-lg">
-                      <p className="text-sm text-primary font-medium">
-                        ✅ Dados enviados com sucesso! Agora você pode baixar o guia.
+                      <h3 className="text-xl font-bold text-card-foreground mb-2">
+                        Preencha seus dados para receber o guia
+                      </h3>
+                      <p className="text-sm text-muted-foreground">
+                        Seus dados estão 100% seguros conosco
                       </p>
                     </div>
+
+                    <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
+                      <div className="space-y-5">
+                        <div className="relative group">
+                          <Label htmlFor="name" className="text-sm font-medium text-card-foreground mb-2 block">
+                            👤 Nome completo
+                          </Label>
+                          <Input
+                            id="name"
+                            type="text"
+                            placeholder="Digite seu nome completo"
+                            {...register("name")}
+                            className="h-12 bg-background/50 backdrop-blur-sm border-2 border-border hover:border-primary/50 focus:border-primary transition-all duration-200 rounded-xl px-4 text-base placeholder:text-muted-foreground/60"
+                          />
+                          {errors.name && (
+                            <p className="text-sm text-destructive mt-1 flex items-center gap-1">
+                              ⚠️ {errors.name.message}
+                            </p>
+                          )}
+                        </div>
+                        
+                        <div className="relative group">
+                          <Label htmlFor="whatsapp" className="text-sm font-medium text-card-foreground mb-2 block">
+                            📱 WhatsApp
+                          </Label>
+                          <Input
+                            id="whatsapp"
+                            type="tel"
+                            placeholder="(11) 99999-9999"
+                            {...register("whatsapp")}
+                            className="h-12 bg-background/50 backdrop-blur-sm border-2 border-border hover:border-primary/50 focus:border-primary transition-all duration-200 rounded-xl px-4 text-base placeholder:text-muted-foreground/60"
+                          />
+                          {errors.whatsapp && (
+                            <p className="text-sm text-destructive mt-1 flex items-center gap-1">
+                              ⚠️ {errors.whatsapp.message}
+                            </p>
+                          )}
+                        </div>
+                        
+                        <div className="relative group">
+                          <Label htmlFor="email" className="text-sm font-medium text-card-foreground mb-2 block">
+                            ✉️ Email
+                          </Label>
+                          <Input
+                            id="email"
+                            type="email"
+                            placeholder="seu@email.com"
+                            {...register("email")}
+                            className="h-12 bg-background/50 backdrop-blur-sm border-2 border-border hover:border-primary/50 focus:border-primary transition-all duration-200 rounded-xl px-4 text-base placeholder:text-muted-foreground/60"
+                          />
+                          {errors.email && (
+                            <p className="text-sm text-destructive mt-1 flex items-center gap-1">
+                              ⚠️ {errors.email.message}
+                            </p>
+                          )}
+                        </div>
+                      </div>
+
+                      <div className="pt-2">
+                        <Button 
+                          type="submit"
+                          variant="hero" 
+                          size="xl" 
+                          className="w-full h-14 text-lg font-semibold rounded-xl bg-gradient-primary hover:shadow-glow transform hover:scale-[1.02] transition-all duration-200 shadow-elegant"
+                          disabled={isSubmitting}
+                        >
+                          {isSubmitting ? (
+                            <div className="flex items-center gap-2">
+                              <div className="w-5 h-5 border-2 border-current border-t-transparent rounded-full animate-spin"></div>
+                              Enviando...
+                            </div>
+                          ) : (
+                            <div className="flex items-center gap-2">
+                              🎁 Quero Receber o Guia Gratuito
+                            </div>
+                          )}
+                        </Button>
+                        
+                        <div className="mt-4 flex items-center justify-center gap-4 text-xs text-muted-foreground">
+                          <span className="flex items-center gap-1">
+                            ✅ Sem spam
+                          </span>
+                          <span className="flex items-center gap-1">
+                            ✅ 100% seguro
+                          </span>
+                          <span className="flex items-center gap-1">
+                            ✅ Download instantâneo
+                          </span>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                ) : (
+                  <div className="space-y-6">
+                    <div className="bg-gradient-primary/10 border-2 border-primary/30 rounded-2xl p-6 shadow-glow">
+                      <div className="text-center space-y-3">
+                        <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto">
+                          <span className="text-2xl">✅</span>
+                        </div>
+                        <h3 className="text-xl font-bold text-primary">
+                          Dados enviados com sucesso!
+                        </h3>
+                        <p className="text-sm text-muted-foreground">
+                          Agora você pode fazer o download do seu guia gratuito
+                        </p>
+                      </div>
+                    </div>
                     
                     <Button 
                       variant="hero" 
                       size="xl" 
-                      className="w-full min-w-[280px]"
+                      className="w-full h-14 text-lg font-semibold rounded-xl bg-gradient-primary hover:shadow-glow transform hover:scale-[1.02] transition-all duration-200 shadow-elegant"
                       onClick={() => window.open('https://cutt.ly/guia_red_flags', '_blank')}
                     >
-                      Baixar Guia Gratuito Agora
+                      <div className="flex items-center gap-2">
+                        📥 Baixar Guia Gratuito Agora
+                      </div>
                     </Button>
                     
-                    <p className="text-sm text-muted-foreground">
-                      ✅ Download instantâneo • ✅ 100% gratuito • ✅ Sem spam
-                    </p>
+                    <div className="text-center space-y-2">
+                      <p className="text-sm text-muted-foreground">
+                        ✅ Download instantâneo • ✅ 100% gratuito • ✅ Sem spam
+                      </p>
+                      <p className="text-xs text-muted-foreground/80">
+                        O download começará automaticamente em uma nova aba
+                      </p>
+                    </div>
                   </div>
                 )}
               </div>
