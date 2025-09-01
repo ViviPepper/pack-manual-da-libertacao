@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
 
 const formSchema = z.object({
   name: z.string().min(2, "Nome deve ter pelo menos 2 caracteres"),
@@ -27,12 +28,28 @@ export default function LeadMagnet() {
   });
 
   const onSubmit = async (data: FormData) => {
-    // Simular envio dos dados
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    console.log("Dados do lead:", data);
-    toast.success("Dados enviados com sucesso! Agora você pode baixar o guia.");
-    setIsSubmitted(true);
+    try {
+      // Inserir dados na tabela leads
+      const { error } = await supabase
+        .from('leads')
+        .insert([
+          {
+            name: data.name,
+            whatsapp: data.whatsapp,
+            email: data.email,
+          }
+        ]);
+
+      if (error) {
+        throw error;
+      }
+
+      toast.success("Dados enviados com sucesso! Agora você pode baixar o guia.");
+      setIsSubmitted(true);
+    } catch (error) {
+      console.error("Erro ao salvar lead:", error);
+      toast.error("Erro ao enviar dados. Tente novamente.");
+    }
   };
 
   return (
