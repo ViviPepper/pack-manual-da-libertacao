@@ -1,6 +1,40 @@
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
+import { toast } from "sonner";
+
+const formSchema = z.object({
+  name: z.string().min(2, "Nome deve ter pelo menos 2 caracteres"),
+  whatsapp: z.string().min(10, "WhatsApp deve ter pelo menos 10 dígitos"),
+  email: z.string().email("Email inválido"),
+});
+
+type FormData = z.infer<typeof formSchema>;
 
 export default function LeadMagnet() {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+  } = useForm<FormData>({
+    resolver: zodResolver(formSchema),
+  });
+
+  const onSubmit = async (data: FormData) => {
+    // Simular envio dos dados
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    
+    console.log("Dados do lead:", data);
+    toast.success("Dados enviados com sucesso! Agora você pode baixar o guia.");
+    setIsSubmitted(true);
+  };
+
   return (
     <section className="py-16 bg-gradient-subtle">
       <div className="container mx-auto px-4">
@@ -62,19 +96,84 @@ export default function LeadMagnet() {
                   </div>
                 </div>
 
-                <div className="space-y-4">
-                  <Button 
-                    variant="hero" 
-                    size="xl" 
-                    className="min-w-[280px]"
-                    onClick={() => window.open('https://cutt.ly/guia_red_flags', '_blank')}
-                  >
-                    Baixar Guia Gratuito Agora
-                  </Button>
-                  <p className="text-sm text-muted-foreground">
-                    ✅ Download instantâneo • ✅ 100% gratuito • ✅ Sem spam
-                  </p>
-                </div>
+                {!isSubmitted ? (
+                  <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+                    <div className="space-y-4">
+                      <div>
+                        <Label htmlFor="name">Nome completo</Label>
+                        <Input
+                          id="name"
+                          type="text"
+                          placeholder="Seu nome completo"
+                          {...register("name")}
+                          className="mt-1"
+                        />
+                        {errors.name && (
+                          <p className="text-sm text-destructive mt-1">{errors.name.message}</p>
+                        )}
+                      </div>
+                      
+                      <div>
+                        <Label htmlFor="whatsapp">WhatsApp</Label>
+                        <Input
+                          id="whatsapp"
+                          type="tel"
+                          placeholder="(11) 99999-9999"
+                          {...register("whatsapp")}
+                          className="mt-1"
+                        />
+                        {errors.whatsapp && (
+                          <p className="text-sm text-destructive mt-1">{errors.whatsapp.message}</p>
+                        )}
+                      </div>
+                      
+                      <div>
+                        <Label htmlFor="email">Email</Label>
+                        <Input
+                          id="email"
+                          type="email"
+                          placeholder="seu@email.com"
+                          {...register("email")}
+                          className="mt-1"
+                        />
+                        {errors.email && (
+                          <p className="text-sm text-destructive mt-1">{errors.email.message}</p>
+                        )}
+                      </div>
+                    </div>
+
+                    <Button 
+                      type="submit"
+                      variant="hero" 
+                      size="xl" 
+                      className="w-full min-w-[280px]"
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? "Enviando..." : "Quero Receber o Guia Gratuito"}
+                    </Button>
+                  </form>
+                ) : (
+                  <div className="space-y-4">
+                    <div className="p-4 bg-primary/10 border border-primary/20 rounded-lg">
+                      <p className="text-sm text-primary font-medium">
+                        ✅ Dados enviados com sucesso! Agora você pode baixar o guia.
+                      </p>
+                    </div>
+                    
+                    <Button 
+                      variant="hero" 
+                      size="xl" 
+                      className="w-full min-w-[280px]"
+                      onClick={() => window.open('https://cutt.ly/guia_red_flags', '_blank')}
+                    >
+                      Baixar Guia Gratuito Agora
+                    </Button>
+                    
+                    <p className="text-sm text-muted-foreground">
+                      ✅ Download instantâneo • ✅ 100% gratuito • ✅ Sem spam
+                    </p>
+                  </div>
+                )}
               </div>
             </div>
           </div>
