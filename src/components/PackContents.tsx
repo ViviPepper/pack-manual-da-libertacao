@@ -101,11 +101,11 @@ export default function PackContents() {
     <section className="py-20 bg-gradient-subtle">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center space-y-6 mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary">
+          <div className="text-center space-y-4 md:space-y-6 mb-12 md:mb-16 px-4 sm:px-0">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary">
               O Mapa Detalhado da Sua Libertação
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Este não é um curso teórico. É o seu kit de ferramentas para a liberdade, 
               dividido em etapas claras e transformadoras.
             </p>
@@ -124,16 +124,16 @@ export default function PackContents() {
                 {coreModule.subtitle}
               </p>
             </CardHeader>
-            <CardContent className="flex flex-col lg:flex-row items-center gap-8">
-              <div className="lg:w-1/3">
+            <CardContent className="flex flex-col lg:flex-row items-center gap-6 md:gap-8 p-4 sm:p-6 md:p-8">
+              <div className="lg:w-1/3 w-full">
                 <img 
                   src="/lovable-uploads/eb6f4153-cdb2-4d6b-a46d-04060e37082a.png" 
                   alt="Manual da Libertação - Dispositivos móveis" 
-                  className="w-full max-w-sm mx-auto rounded-lg shadow-glow"
+                  className="w-full max-w-xs sm:max-w-sm mx-auto rounded-lg shadow-glow"
                 />
               </div>
-              <div className="lg:w-2/3 space-y-6">
-                <p className="text-lg text-foreground leading-relaxed mb-6">
+              <div className="lg:w-2/3 space-y-4 md:space-y-6">
+                <p className="text-base sm:text-lg text-foreground leading-relaxed mb-4 md:mb-6">
                   {coreModule.description}
                 </p>
                 <div className="space-y-6">
@@ -157,16 +157,16 @@ export default function PackContents() {
 
           {/* Tools Section */}
           <div className="space-y-8">
-            <div className="text-center">
-              <h3 className="text-3xl font-bold text-primary mb-4">
+            <div className="text-center px-4 sm:px-0">
+              <h3 className="text-2xl sm:text-3xl font-bold text-primary mb-3 md:mb-4">
                 Suas Ferramentas de Segurança e Clareza
               </h3>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
                 Guias práticos e exercícios transformadores para cada etapa da sua jornada.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
               {tools.map((tool, index) => (
                 <Card key={index} className="shadow-card hover:shadow-glow transition-all duration-300 group overflow-hidden">
                   <div className="aspect-[4/3] overflow-hidden">
@@ -176,16 +176,16 @@ export default function PackContents() {
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
-                  <CardHeader className="pb-4">
-                    <Badge variant="secondary" className="w-fit mb-2">
+                  <CardHeader className="pb-3 md:pb-4 p-3 md:p-6">
+                    <Badge variant="secondary" className="w-fit mb-1.5 md:mb-2 text-xs">
                       {tool.type}
                     </Badge>
-                    <CardTitle className="text-lg group-hover:text-primary transition-colors">
+                    <CardTitle className="text-base sm:text-lg group-hover:text-primary transition-colors leading-snug">
                       {tool.title}
                     </CardTitle>
                   </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground leading-relaxed">
+                  <CardContent className="p-3 md:p-6 pt-0">
+                    <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                       {tool.description}
                     </p>
                   </CardContent>
@@ -196,32 +196,33 @@ export default function PackContents() {
 
           {/* Audio Support */}
           <Card className="mt-16 shadow-elegant bg-gradient-hero/10 border-accent/20">
-            <CardContent className="flex flex-col lg:flex-row items-center gap-8 p-8">
-              <div className="lg:w-1/3">
+            <CardContent className="flex flex-col lg:flex-row items-center gap-6 md:gap-8 p-4 sm:p-6 md:p-8">
+              <div className="lg:w-1/3 w-full">
                 <img 
                   src="/lovable-uploads/89b229e2-74d2-45e8-9375-516cb3834031.png" 
                   alt="Áudios de Libertação" 
-                  className="w-full max-w-sm mx-auto rounded-lg shadow-glow"
+                  className="w-full max-w-xs sm:max-w-sm mx-auto rounded-lg shadow-glow"
                 />
               </div>
-              <div className="lg:w-2/3 space-y-6">
+              <div className="lg:w-2/3 space-y-4 md:space-y-6">
                 <div>
-                  <Badge className="bg-accent text-accent-foreground mb-4">
+                  <Badge className="bg-accent text-accent-foreground mb-3 md:mb-4 text-xs sm:text-sm">
                     Apoio Diário
                   </Badge>
-                  <h3 className="text-2xl font-bold text-primary mb-4">
+                  <h3 className="text-xl sm:text-2xl font-bold text-primary mb-3 md:mb-4">
                     31 Áudios de Libertação
                   </h3>
                 </div>
-                <p className="text-lg text-foreground leading-relaxed">
+                <p className="text-base sm:text-lg text-foreground leading-relaxed">
                   Uma pílula diária de força, clareza e acolhimento para te acompanhar por um mês inteiro. 
                   Cada áudio é um lembrete de que você não está sozinha e de que a cada dia você dá 
                   um novo passo em direção à sua liberdade.
                 </p>
-                 <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                 <div className="flex flex-col sm:flex-row gap-4 pt-2 md:pt-4">
                    <Button 
                      variant="liberation" 
                      size="lg"
+                     className="h-11 sm:h-12 text-sm sm:text-base px-6 sm:px-8"
                      onClick={() => window.open('https://go.hotmart.com/F101483319F?dp=1', '_blank')}
                    >
                      Quero Começar Hoje

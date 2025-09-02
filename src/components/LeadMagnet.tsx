@@ -55,9 +55,9 @@ export default function LeadMagnet() {
   return (
     <section className="py-16 bg-gradient-subtle">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-card rounded-2xl p-8 md:p-12 shadow-elegant border border-accent/20">
-            <div className="grid lg:grid-cols-2 gap-8 items-center">
+        <div className="max-w-5xl mx-auto text-center">
+          <div className="bg-card rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 shadow-elegant border border-accent/20">
+            <div className="grid lg:grid-cols-2 gap-6 md:gap-8 items-center">
               {/* Imagem do E-book */}
               <div className="lg:order-2">
                 <img 
@@ -68,16 +68,16 @@ export default function LeadMagnet() {
               </div>
 
               {/* Conteúdo */}
-              <div className="lg:order-1 space-y-6">
-                <div className="space-y-4 text-left lg:text-left">
-                  <div className="inline-flex items-center px-4 py-2 bg-primary text-primary-foreground rounded-full text-sm font-semibold">
+              <div className="lg:order-1 space-y-4 md:space-y-6">
+                <div className="space-y-3 md:space-y-4 text-center lg:text-left">
+                  <div className="inline-flex items-center px-3 py-1.5 md:px-4 md:py-2 bg-primary text-primary-foreground rounded-full text-xs sm:text-sm font-semibold">
                     🎁 Presente Gratuito
                   </div>
-                  <h2 className="text-3xl md:text-4xl font-bold text-card-foreground">
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-card-foreground">
                     Guia Rápido: Sinais de Alerta em 
                     <span className="block text-primary">Relacionamentos Tóxicos</span>
                   </h2>
-                  <p className="text-lg text-muted-foreground">
+                  <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
                     Receba gratuitamente este e-book essencial com os principais sinais de alerta 
                     para identificar comportamentos tóxicos antes que seja tarde demais.
                   </p>
@@ -114,7 +114,7 @@ export default function LeadMagnet() {
                 </div>
 
                 {!isSubmitted ? (
-                  <div className="bg-gradient-primary/5 border border-primary/20 rounded-2xl p-6 shadow-glow">
+                  <div className="bg-gradient-primary/5 border border-primary/20 rounded-2xl p-4 sm:p-6 shadow-glow">
                     <div className="mb-6 text-center">
                       <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-3">
                         🔐 Acesso Exclusivo

@@ -40,40 +40,40 @@ export default function Transformation() {
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center space-y-6 mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary">
+          <div className="text-center space-y-4 md:space-y-6 mb-12 md:mb-16 px-4 sm:px-0">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary">
               Sua Jornada de Transformação
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Da Sobrevivente à Protagonista: Com o Pack da Libertação, você vai trocar...
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div className="space-y-4 md:space-y-6">
               {transformations.map((transformation, index) => (
                 <Card key={index} className="shadow-card hover:shadow-glow transition-all duration-300">
-                  <CardContent className="p-6">
-                    <div className="flex items-center gap-4 mb-3">
+                  <CardContent className="p-4 sm:p-6">
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 mb-3">
                       <div className="flex-1">
-                        <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider">
+                        <span className="text-xs sm:text-sm font-medium text-muted-foreground uppercase tracking-wider">
                           De:
                         </span>
-                        <div className="text-lg font-semibold text-foreground line-through opacity-60">
+                        <div className="text-base sm:text-lg font-semibold text-foreground line-through opacity-60">
                           {transformation.from}
                         </div>
                       </div>
-                      <div className="text-2xl text-primary">→</div>
+                      <div className="text-xl sm:text-2xl text-primary self-center">→</div>
                       <div className="flex-1">
-                        <span className="text-sm font-medium text-primary uppercase tracking-wider">
+                        <span className="text-xs sm:text-sm font-medium text-primary uppercase tracking-wider">
                           Para:
                         </span>
-                        <div className="text-lg font-bold text-primary">
+                        <div className="text-base sm:text-lg font-bold text-primary">
                           {transformation.to}
                         </div>
                       </div>
                     </div>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                       {transformation.description}
                     </p>
                   </CardContent>
@@ -95,14 +95,15 @@ export default function Transformation() {
             </div>
           </div>
 
-          <div className="text-center pt-16">
-            <p className="text-lg text-foreground mb-8 max-w-2xl mx-auto">
+          <div className="text-center pt-12 md:pt-16 px-4 sm:px-0">
+            <p className="text-base sm:text-lg text-foreground mb-6 md:mb-8 max-w-2xl mx-auto leading-relaxed">
               Esta transformação não acontece da noite para o dia, mas cada passo que você dá 
               te aproxima da mulher livre, forte e autêntica que você sempre foi.
             </p>
             <Button 
               variant="liberation" 
               size="xl"
+              className="h-12 sm:h-14 text-sm sm:text-base px-6 sm:px-8"
               onClick={() => window.open('https://go.hotmart.com/F101483319F?dp=1', '_blank')}
             >
               Iniciar Minha Transformação Agora
