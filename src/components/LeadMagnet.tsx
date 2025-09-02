@@ -53,17 +53,17 @@ export default function LeadMagnet() {
   };
 
   return (
-    <section className="py-16 bg-gradient-subtle">
-      <div className="container mx-auto px-4">
-        <div className="max-w-5xl mx-auto text-center">
-          <div className="bg-card rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 shadow-elegant border border-accent/20">
+    <section className="py-8 sm:py-12 md:py-16 bg-gradient-subtle">
+      <div className="container mx-auto px-3 sm:px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="bg-card rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 shadow-elegant border border-accent/20">
             <div className="grid lg:grid-cols-2 gap-6 md:gap-8 items-center">
               {/* Imagem do E-book */}
-              <div className="lg:order-2">
+              <div className="lg:order-2 flex justify-center">
                 <img 
                   src="/lovable-uploads/32fe4b4c-c787-4e8d-bdd7-3643cab8fa33.png" 
                   alt="Guia Rápido: Sinais de Alerta em Relacionamentos Tóxicos" 
-                  className="w-full max-w-md mx-auto rounded-lg shadow-glow"
+                  className="w-full max-w-[280px] sm:max-w-sm md:max-w-md mx-auto rounded-lg shadow-glow"
                 />
               </div>
 
@@ -83,54 +83,54 @@ export default function LeadMagnet() {
                   </p>
                 </div>
 
-                <div className="space-y-4">
+                <div className="space-y-3 sm:space-y-4">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-primary/10 text-primary rounded-full flex items-center justify-center">
+                    <div className="w-8 h-8 sm:w-10 sm:h-10 bg-primary/10 text-primary rounded-full flex items-center justify-center text-sm sm:text-base">
                       ⚠️
                     </div>
                     <div className="text-left">
-                      <h3 className="font-semibold text-card-foreground">Sinais Claros</h3>
-                      <p className="text-sm text-muted-foreground">Red flags evidentes</p>
+                      <h3 className="text-sm sm:text-base font-semibold text-card-foreground">Sinais Claros</h3>
+                      <p className="text-xs sm:text-sm text-muted-foreground">Red flags evidentes</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-primary/10 text-primary rounded-full flex items-center justify-center">
+                    <div className="w-8 h-8 sm:w-10 sm:h-10 bg-primary/10 text-primary rounded-full flex items-center justify-center text-sm sm:text-base">
                       🛡️
                     </div>
                     <div className="text-left">
-                      <h3 className="font-semibold text-card-foreground">Proteção Imediata</h3>
-                      <p className="text-sm text-muted-foreground">Ações práticas de segurança</p>
+                      <h3 className="text-sm sm:text-base font-semibold text-card-foreground">Proteção Imediata</h3>
+                      <p className="text-xs sm:text-sm text-muted-foreground">Ações práticas de segurança</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-primary/10 text-primary rounded-full flex items-center justify-center">
+                    <div className="w-8 h-8 sm:w-10 sm:h-10 bg-primary/10 text-primary rounded-full flex items-center justify-center text-sm sm:text-base">
                       💪
                     </div>
                     <div className="text-left">
-                      <h3 className="font-semibold text-card-foreground">Fortalecimento</h3>
-                      <p className="text-sm text-muted-foreground">Primeiros passos da cura</p>
+                      <h3 className="text-sm sm:text-base font-semibold text-card-foreground">Fortalecimento</h3>
+                      <p className="text-xs sm:text-sm text-muted-foreground">Primeiros passos da cura</p>
                     </div>
                   </div>
                 </div>
 
                 {!isSubmitted ? (
                   <div className="bg-gradient-primary/5 border border-primary/20 rounded-2xl p-4 sm:p-6 shadow-glow">
-                    <div className="mb-6 text-center">
-                      <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-3">
+                    <div className="mb-4 sm:mb-6 text-center">
+                      <div className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 bg-primary/10 text-primary rounded-full text-xs sm:text-sm font-medium mb-2 sm:mb-3">
                         🔐 Acesso Exclusivo
                       </div>
-                      <h3 className="text-xl font-bold text-card-foreground mb-2">
+                      <h3 className="text-lg sm:text-xl font-bold text-card-foreground mb-1 sm:mb-2">
                         Preencha seus dados para receber o guia
                       </h3>
-                      <p className="text-sm text-muted-foreground">
+                      <p className="text-xs sm:text-sm text-muted-foreground">
                         Seus dados estão 100% seguros conosco
                       </p>
                     </div>
 
-                    <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
-                      <div className="space-y-5">
+                    <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 sm:space-y-5">
+                      <div className="space-y-4 sm:space-y-5">
                         <div className="relative group">
-                          <Label htmlFor="name" className="text-sm font-medium text-card-foreground mb-2 block">
+                          <Label htmlFor="name" className="text-xs sm:text-sm font-medium text-card-foreground mb-1.5 sm:mb-2 block">
                             👤 Nome completo
                           </Label>
                           <Input
@@ -138,17 +138,17 @@ export default function LeadMagnet() {
                             type="text"
                             placeholder="Digite seu nome completo"
                             {...register("name")}
-                            className="h-12 bg-background/50 backdrop-blur-sm border-2 border-border hover:border-primary/50 focus:border-primary transition-all duration-200 rounded-xl px-4 text-base placeholder:text-muted-foreground/60"
+                            className="h-10 sm:h-12 bg-background/50 backdrop-blur-sm border-2 border-border hover:border-primary/50 focus:border-primary transition-all duration-200 rounded-lg sm:rounded-xl px-3 sm:px-4 text-sm sm:text-base placeholder:text-muted-foreground/60"
                           />
                           {errors.name && (
-                            <p className="text-sm text-destructive mt-1 flex items-center gap-1">
+                            <p className="text-xs sm:text-sm text-destructive mt-1 flex items-center gap-1">
                               ⚠️ {errors.name.message}
                             </p>
                           )}
                         </div>
                         
                         <div className="relative group">
-                          <Label htmlFor="whatsapp" className="text-sm font-medium text-card-foreground mb-2 block">
+                          <Label htmlFor="whatsapp" className="text-xs sm:text-sm font-medium text-card-foreground mb-1.5 sm:mb-2 block">
                             📱 WhatsApp
                           </Label>
                           <Input
@@ -156,17 +156,17 @@ export default function LeadMagnet() {
                             type="tel"
                             placeholder="(11) 99999-9999"
                             {...register("whatsapp")}
-                            className="h-12 bg-background/50 backdrop-blur-sm border-2 border-border hover:border-primary/50 focus:border-primary transition-all duration-200 rounded-xl px-4 text-base placeholder:text-muted-foreground/60"
+                            className="h-10 sm:h-12 bg-background/50 backdrop-blur-sm border-2 border-border hover:border-primary/50 focus:border-primary transition-all duration-200 rounded-lg sm:rounded-xl px-3 sm:px-4 text-sm sm:text-base placeholder:text-muted-foreground/60"
                           />
                           {errors.whatsapp && (
-                            <p className="text-sm text-destructive mt-1 flex items-center gap-1">
+                            <p className="text-xs sm:text-sm text-destructive mt-1 flex items-center gap-1">
                               ⚠️ {errors.whatsapp.message}
                             </p>
                           )}
                         </div>
                         
                         <div className="relative group">
-                          <Label htmlFor="email" className="text-sm font-medium text-card-foreground mb-2 block">
+                          <Label htmlFor="email" className="text-xs sm:text-sm font-medium text-card-foreground mb-1.5 sm:mb-2 block">
                             ✉️ Email
                           </Label>
                           <Input
@@ -174,37 +174,37 @@ export default function LeadMagnet() {
                             type="email"
                             placeholder="seu@email.com"
                             {...register("email")}
-                            className="h-12 bg-background/50 backdrop-blur-sm border-2 border-border hover:border-primary/50 focus:border-primary transition-all duration-200 rounded-xl px-4 text-base placeholder:text-muted-foreground/60"
+                            className="h-10 sm:h-12 bg-background/50 backdrop-blur-sm border-2 border-border hover:border-primary/50 focus:border-primary transition-all duration-200 rounded-lg sm:rounded-xl px-3 sm:px-4 text-sm sm:text-base placeholder:text-muted-foreground/60"
                           />
                           {errors.email && (
-                            <p className="text-sm text-destructive mt-1 flex items-center gap-1">
+                            <p className="text-xs sm:text-sm text-destructive mt-1 flex items-center gap-1">
                               ⚠️ {errors.email.message}
                             </p>
                           )}
                         </div>
                       </div>
 
-                      <div className="pt-2">
+                      <div className="pt-1 sm:pt-2">
                         <Button 
                           type="submit"
                           variant="hero" 
                           size="xl" 
-                          className="w-full h-14 text-lg font-semibold rounded-xl bg-gradient-primary hover:shadow-glow transform hover:scale-[1.02] transition-all duration-200 shadow-elegant"
+                          className="w-full h-11 sm:h-14 text-sm sm:text-lg font-semibold rounded-lg sm:rounded-xl bg-gradient-primary hover:shadow-glow transform hover:scale-[1.02] transition-all duration-200 shadow-elegant"
                           disabled={isSubmitting}
                         >
                           {isSubmitting ? (
                             <div className="flex items-center gap-2">
-                              <div className="w-5 h-5 border-2 border-current border-t-transparent rounded-full animate-spin"></div>
-                              Enviando...
+                              <div className="w-4 h-4 sm:w-5 sm:h-5 border-2 border-current border-t-transparent rounded-full animate-spin"></div>
+                              <span className="text-sm sm:text-base">Enviando...</span>
                             </div>
                           ) : (
                             <div className="flex items-center gap-2">
-                              🎁 Quero Receber o Guia Gratuito
+                              <span className="text-sm sm:text-base">🎁 Quero Receber o Guia Gratuito</span>
                             </div>
                           )}
                         </Button>
                         
-                        <div className="mt-4 flex items-center justify-center gap-4 text-xs text-muted-foreground">
+                        <div className="mt-3 sm:mt-4 flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-xs text-muted-foreground">
                           <span className="flex items-center gap-1">
                             ✅ Sem spam
                           </span>
