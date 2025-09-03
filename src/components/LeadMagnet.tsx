@@ -219,13 +219,13 @@ export default function LeadMagnet() {
                     </form>
                   </div>
                 ) : (
-                  <div className="space-y-6">
-                    <div className="bg-gradient-primary/10 border-2 border-primary/30 rounded-2xl p-6 shadow-glow">
+                  <div className="space-y-4 sm:space-y-6 mt-4 sm:mt-6">
+                    <div className="bg-gradient-primary/10 border-2 border-primary/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-glow">
                       <div className="text-center space-y-3">
-                        <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto">
-                          <span className="text-2xl">✅</span>
+                        <div className="w-12 h-12 sm:w-16 sm:h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto">
+                          <span className="text-xl sm:text-2xl">✅</span>
                         </div>
-                        <h3 className="text-xl font-bold text-primary">
+                        <h3 className="text-lg sm:text-xl font-bold text-primary">
                           Dados enviados com sucesso!
                         </h3>
                         <p className="text-sm text-muted-foreground">
@@ -237,7 +237,7 @@ export default function LeadMagnet() {
                     <Button 
                       variant="hero" 
                       size="xl" 
-                      className="w-full h-14 text-lg font-semibold rounded-xl bg-gradient-primary hover:shadow-glow transform hover:scale-[1.02] transition-all duration-200 shadow-elegant"
+                      className="w-full h-12 sm:h-14 text-sm sm:text-lg font-semibold rounded-lg sm:rounded-xl bg-gradient-primary hover:shadow-glow transform hover:scale-[1.02] transition-all duration-200 shadow-elegant"
                       onClick={() => window.open('https://cutt.ly/guia_red_flags', '_blank')}
                     >
                       <div className="flex items-center gap-2">
