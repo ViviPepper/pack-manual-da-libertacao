@@ -11,7 +11,7 @@ const diarioAutoconhecimento = "/lovable-uploads/4326aa00-77d7-4dce-828e-90ca506
 
 export default function PackContents() {
   const coreModule = {
-    title: "Manual da Libertação - A Bíblia da Cura Emocional",
+    title: "Da Libertação - A Bíblia da Cura Emocional",
     subtitle: "A Peça Central",
     description: "Um guia profundo que usa a poderosa analogia da jornada bíblica para te levar do cativeiro à terra prometida do amor-próprio. Ele te acompanha passo a passo desde o \"Gênesis\" até o seu \"Novo Testamento\".",
     highlight: "Guia Principal"
@@ -128,7 +128,7 @@ export default function PackContents() {
               <div className="lg:w-1/3 w-full">
                 <img 
                   src="/lovable-uploads/eb6f4153-cdb2-4d6b-a46d-04060e37082a.png" 
-                  alt="Manual da Libertação - Dispositivos móveis" 
+                  alt="Da Libertação - Dispositivos móveis" 
                   className="w-full max-w-xs sm:max-w-sm mx-auto rounded-lg shadow-glow"
                 />
               </div>

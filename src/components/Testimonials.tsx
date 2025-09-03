@@ -8,7 +8,7 @@ const testimonials = [{
   age: 34,
   location: "São Paulo, SP",
   image: testimonialWoman1,
-  testimonial: "Depois de 8 anos em um relacionamento tóxico, eu não sabia mais quem eu era. O Pack Manual da Libertação me mostrou que eu merecia muito mais. Hoje estou livre, feliz e construindo a vida que sempre sonhei."
+  testimonial: "Depois de 8 anos em um relacionamento tóxico, eu não sabia mais quem eu era. O Pack da Libertação me mostrou que eu merecia muito mais. Hoje estou livre, feliz e construindo a vida que sempre sonhei."
 }, {
   name: "Ana Costa",
   age: 28,
@@ -38,7 +38,7 @@ export default function Testimonials() {
               <span className="block text-primary">Transformação e Liberdade</span>
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Mulheres que usaram o Pack Manual da Libertação para transformar suas vidas e encontrar a verdadeira felicidade
+              Mulheres que usaram o Pack da Libertação para transformar suas vidas e encontrar a verdadeira felicidade
             </p>
           </div>
 
