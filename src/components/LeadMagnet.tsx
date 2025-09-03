@@ -73,17 +73,17 @@ export default function LeadMagnet() {
                   <div className="inline-flex items-center px-3 py-1.5 md:px-4 md:py-2 bg-primary text-primary-foreground rounded-full text-xs sm:text-sm font-semibold">
                     🎁 Presente Gratuito
                   </div>
-                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-card-foreground">
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-card-foreground text-center lg:text-left">
                     Guia Rápido: Sinais de Alerta em 
                     <span className="block text-primary">Relacionamentos Tóxicos</span>
                   </h2>
-                  <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                  <p className="text-base md:text-lg text-muted-foreground leading-relaxed text-center lg:text-left max-w-lg mx-auto lg:mx-0">
                     Receba gratuitamente este e-book essencial com os principais sinais de alerta 
                     para identificar comportamentos tóxicos antes que seja tarde demais.
                   </p>
                 </div>
 
-                <div className="space-y-3 sm:space-y-4">
+                <div className="space-y-4 flex flex-col items-center lg:items-start">
                   <div className="flex items-center gap-3">
                     <div className="w-8 h-8 sm:w-10 sm:h-10 bg-primary/10 text-primary rounded-full flex items-center justify-center text-sm sm:text-base">
                       ⚠️
